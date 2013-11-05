@@ -1,12 +1,20 @@
 @import url(reset.css);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 @import url(http://fonts.googleapis.com/css?family=Rock+Salt);
+@import url(http://fonts.googleapis.com/css?family=Megrim);
 
 * {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
+.home{
+	background-image: url(../img/home.jpg);
+	background-position: left top;
+	font-family:  'Open Sans Condensed', sans-serif;
+	font-size: 25px;
+	padding: 10px;
+}
 body {
 	background-image: url(../img/pizza1.jpg);
 	background-position: left top;
@@ -28,17 +36,24 @@ a.link {
 .content-box { /* class selector */
 	width: 80%; /* when it changes, the width changes */
 	margin: 0 auto; /* take horizontal center the box */
-	box-shadow: 2px 2px 6px #555; /* 6. how much it blurred*/
 	padding: 10px 30px;
-	background: rgba(0, 0, 0, .7);
+	background-color: rgba(0, 0, 0, 0.7);
 	max-width: 900px;
 }
 
-.name{
-	font-family: 'Rock Salt', cursive;
+.name2{
+	font-family: 'Megrim', cursive;
 	font-size: 350%;
 	color: #c69453;
 	float: top;
+}
+
+.name3{
+	font-family: 'Megrim', cursive;
+	font-size: 500%;
+	color: #c69453;
+	float: top;
+	padding-top: 70px;
 }
 
 .motto {
@@ -206,35 +221,6 @@ a{
     float: left;
 }
 
-.menus {
-	width: 600px;
-    max-width: 100%;
-    min-width: 100%;
-}
-.menus:after {
-    content: " ";
-    display: table;
-    clear: both;
-}
-
-.col-left {
-    padding: 5px;
-}
-.col-right {
-    padding: 5px;    
-}
-
-.col-bottom {
-	padding: 5px;
-}
-
-.high{
-	border-top: 5px dotted #ffffff;
-	border-bottom: 5px dotted #ffffff;
-	color:#c69453;;
-	padding: 5px;
-}
-
 .about{
 	font-size: 80%;
 	margin: 5px;
@@ -311,9 +297,6 @@ a{
 }
 
 @media (max-width: 600px) {
-	nav li {
-		display: block;
-	}
     .logo {
     	width: 80px;
     	height: 80px;
