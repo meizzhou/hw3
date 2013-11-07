@@ -1,104 +1,62 @@
+/* Google web fonts 'Open Sans' (italic and normal) and 'Boogaloo' */
 @import url(reset.css);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
-@import url(http://fonts.googleapis.com/css?family=Rock+Salt);
-@import url(http://fonts.googleapis.com/css?family=Megrim);
 
 * {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-.home{
-	background-image: url(../img/home.jpg);
-	background-position: left top;
-	font-family:  'Open Sans Condensed', sans-serif;
-	font-size: 25px;
-	padding: 10px;
-}
-body {
-	background-image: url(../img/pizza1.jpg);
-	background-position: left top;
-	font-family:  'Open Sans Condensed', sans-serif;
-	font-size: 25px;
-	padding: 10px;
+header {
+	display: block;
+	width: 100%;
+	background: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ba8748;
 }
 
-:focus {
-	outline: #FFF dotted 2px;
-	background-color: #000;
+.header-inner {
+	width: 100%;
 }
 
-a.link {
-    display: inline-block;
-    float: right;
-}
-
-.content-box { /* class selector */
-	width: 80%; /* when it changes, the width changes */
-	margin: 0 auto; /* take horizontal center the box */
-	padding: 10px 30px;
-	background-color: rgba(0, 0, 0, 0.7);
-	max-width: 900px;
-}
-
-.name2{
-	font-family: 'Megrim', cursive;
-	font-size: 350%;
-	color: #c69453;
-	float: top;
-}
-
-.name3{
-	font-family: 'Megrim', cursive;
-	font-size: 500%;
-	color: #c69453;
-	float: top;
-	padding-top: 70px;
-}
-
-.motto {
-	margin-left: 10px;
-	padding: 10px;
-}
-
-.logo{
-	width: 150px;
-	height: 150px;
+.link {
 	float: right;
-	padding: 10px;
-	opacity: 0.5;
-	max-width: 100%;
-	max-height: 100%;
 }
 
-.logo:hover {
-	opacity: 1;
+body {
+	font-size: 100%;
+	font: inherit;
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+	color: #ba8748;
 }
 
-.logo {
-	transition: all 0.5s;
+.div {
+	display: block;
 }
 
-.logo:hover {
-	-webkit-transform: scale(1.5) rotate(360deg);
-	-moz-transform: scale(1.5) rotate(360deg);
-	-o-transform: scale(1.5) rotate(360deg);
-	-ms-transform: scale(1.5) rotate(360deg);
-	transform: scale(1.5) rotate(360deg);
+.unit4 {
+	width: 510px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
-nav ul {
-	width: 97%;
-	border-radius: 5px;
-	margin-bottom: 15px;
+.topper {
+	height: 152px;
+	letter-spacing: 0.5em;
+}
+
+p.title {
+	margin-top: 40px;
 }
 
 nav a {
 	display: inline-block;
-	padding: 10px;
-	color: #FFF;
-	font-size: 110%;
-	transition: all 0.5s;
+	padding-right: 45px;
+	padding-left: 65px;
+	color: #ba8748;
+	letter-spacing: 0.2em;
 }
 
 nav li {
@@ -110,213 +68,122 @@ nav a:visited {
 	text-decoration: none;
 }
 
-nav a:hover {
-	background-color: #F00;
-	border-radius: 5px;
-	-webkit-transform: scale(1.5) rotate(360deg);
-	-moz-transform: scale(1.5) rotate(360deg);
-	-o-transform: scale(1.5) rotate(360deg);
-	-ms-transform: scale(1.5) rotate(360deg);
-	transform: scale(1.5) rotate(360deg);
+img {
+	max-width: 100%;
+	max-height: 100%;
+	display: inline;
 }
 
-.email {
-    color: #FFF;
+.piece {
+	width: 3000px;
 }
 
-.twitter {
-    color: #FFF;
+.info {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-weight: 300;
+	font-size: 86%;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .map{
-   color: #FFF; 
+	text-decoration: none;
+	color: #ba8748;
+	font-weight: 100;
 }
 
-.middle{
-	min-width:100%; 
-	min-height:100%;
-	max-width: 100%;
-	max-height: 100%;
-}
-
-.video{
-	max-width: 100%;
-	max-height: 100%;
+.title {
+	font-size: 130%;
 }
 
 footer {
 	bottom: 15px;
-	left: 10px;
+	right: 20px;
 	max-width: 200px;
 	padding-bottom: 10px;
 	padding-left: 5px;
 	position: fixed;
-	font-size: 70%;
+	font-size: 60%;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: #ba8748;
 }
 
 .line{
-	border-top: 5px solid #ffffff;
-	border-bottom: 5px solid #ffffff;
+	border-top: 2px solid #ba8748;
+	border-bottom: 2px solid #ba8748;
 	margin-bottom: 5px;
 	font-size: 22px;
 }
 
-.info{
-	padding: 10px;
-	margin-top: 20px;
+a{
+	text-decoration: none;
+	color: #ba8748;
 }
 
-.time{
-	color: #FFF;
-	margin-top: 10px;
-}
-
-h1 {
-	font-size: 40px;
-	border-width: 1px;
-	border-bottom-style:solid;
-	border-color: #FFF;
-	color:#FFF;
-	margin-bottom: 5px;
+:focus {
+	outline: #FFF dotted 2px;
+	background-color: #000;
 }
 
 h2{
 	margin-top: 5px;
+	font-size: 150%;
+	color:  #c69453;
+}
+
+.price {
+	margin-bottom: 10px;
+}
+.menus {
+	background-image: url('../img/final.jpg');
+	background-repeat: no-repeat; 
+	background-size: 100% 100%;
+}
+
+.manuname {
+	background-color: rgba(0, 0, 0, 0.3);
+	font-family: 'Open Sans Condensed', sans-serif;
+	padding: 50px;
+	color: #FFF;
+}
+
+.about {
 	background-color: #c69453;
-	font-size: 120%;
-	font-weight: bold;
-}
-
-h3{
-	color: #c69453;
-	margin-top: 10px;
-}
-
-p{
 	color: #FFF;
-	margin-top: 10px;
-
+	font-family: 'Open Sans Condensed', sans-serif;
+	padding-bottom: 20px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: block;
 }
 
-a{
-	text-decoration: none;
-}
-
-.order{
-	margin-right: 15px;
-	width: 155px;
-	height: 155px;
-	float:left;
-	max-width: 100%;
-	max-height: 100%;
-	margin-top: 10px;
-}
-
-.menus{
-	font-size: 70%;
-}
-
-.col {
-    width: 50%;
-    float: left;
-}
-
-.about{
-	font-size: 80%;
-	margin: 5px;
-}
-
-.ovenPic{
-	margin-right: 15px;
-	width: 400px;
-	height: 200px;
-	max-width: 100%;
-	max-height: 100%;
-}
-
-.make{
-	margin-right: 15px;
-	width: 155px;
-	height: 155px;
-}
-
-.lastPara{
-	margin-bottom: 20px;
-}
-
-.footer{
-	margin-top: 40px;
-	border-width:1px;	
-	border-top-style:solid;
-	border-color: #DEDEDE;
-	font-size: 80%;
-	font-style: italic;
-	padding-top: 10px;
-	color: #FFF;
+.last {
+	margin-bottom: 40px;
 }
 
 @media (max-width: 767px) {
-    .col {
-            float: none;
-            width: 100%;
-    }
-
-    .line {
-    	display: none;
-    }
-
-    nav li {
-    	font-size: 20px;
-    }
-
-    .name {
-    	font-size: 35px;
-    }
-
-    p {
+	 p {
     	font-size: 80%;
     }
 
-    .video {
-    	height: 250px;
-    }
-
-    .footer {
-    	font-size: 15px;
-    }
-
-    .manuname {
-    	font-size: 25px;
-    }
-
-    .motto {
-    	padding: 0px;
-    	font-size: 17px;
-    }
-
-}
-
-@media (max-width: 600px) {
     .logo {
-    	width: 80px;
-    	height: 80px;
+    	display: none;
+    }
+
+    footer {
+    	display: none;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .info {
+    	text-align: left;
+    }
+
+    .title {
+    	text-align: left;
     }
 }
-
-@media (max-width: 480px) {
-	.logo {
-		width: 55px;
-		height: 55px;
-	} 
-}
-
-@media (max-width: 300px) {
-    .name {
-        font-size: 20px;
-    }
-}
-
-
-
-
-
