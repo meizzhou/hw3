@@ -164,10 +164,6 @@ h2{
 }
 
 @media (max-width: 767px) {
-	 p {
-    	font-size: 80%;
-    }
-
     .logo {
     	display: none;
     }
