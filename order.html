@@ -1,56 +1,102 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset = "UTF-8">
-		<meta name = "author" content = "meizzhou">
-		<link rel="shortcut icon" href="img/logo.png">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<link rel="stylesheet" type="text/css" href="css/styles.css">
-		<title>Dawg-Pizza</title>
-	</head>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "author" content = "meizzhou">
+        <link rel="shortcut icon" href="img/logo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="lib/bootstrap-3.0.2/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-	<body>
-		<a class = "link" href="index.html"><img class = "logo" src="img/logo.jpg" alt = "logodog"></a>
-		<header>
-			<div class = "header-inner">
-				<div class = "unit4">
-					<div class = "topper">
-						<p class = "title">Dawg Pizza</p>
-						<div class = "info" style="display: block;">
-						<p class = "address">Monday through Saturday</p>
-						<p>10:00AM to 11:00PM</p>
-						<p ><a class = "map" href="https://maps.google.com/maps?q=4306+University+Way+NE,+Seattle,+WA+98105&hl=en&sll=47.613028,-122.342064&sspn=0.460114,0.819855&hnear=4306+University+Way+NE,+Seattle,+Washington+98105&t=m&z=17&iwloc=A">4306 University Way NE, Seattle, WA 98105</a></p>
-					</div>
-					</div>
-				</div>
-			</div>
+        <title>Dawg-Pizza</title>
+    </head>
 
-			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li> 
-					<li><a href="menu.html">Menu</a></li>
-					<li><a href="about.html">About Us</a></li>
-					<li><a href="order.html">Order</a></li>
-				</ul>
-			</nav>
+    <body>
+        <a class = "link" href="index.html"><img class = "logo" src="img/logo.jpg" alt = "logodog"></a>
+        <header>
+            <div class = "header-inner">
+                <div class = "unit4">
+                    <div class = "topper">
+                        <p class = "title">Dawg Pizza</p>
+                        <div class = "info" style="display: block;">
+                            <p class = "address">Monday through Saturday</p>
+                            <p>10:00AM to 11:00PM</p>
+                            <p ><a class = "map" href="https://maps.google.com/maps?q=4306+University+Way+NE,+Seattle,+WA+98105&hl=en&sll=47.613028,-122.342064&sspn=0.460114,0.819855&hnear=4306+University+Way+NE,+Seattle,+Washington+98105&t=m&z=17&iwloc=A">4306 University Way NE, Seattle, WA 98105</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-		</header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li> 
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="order.html">Order</a></li>
+                </ul>
+            </nav>
 
-		<div class = "about2">
-			<h2>We deliver</h2>
-				<p> We deliver only within the Seattle city limits</p>
-				<p> We deliver only from noon to 11:00pm</p>
-				<p> We accept cash or credit cards on delivery</p>		
-		<div>
+        </header>
 
-		<footer>
-			<div class = "line">
-				<p>CALL US!</p>
-				<p>206-555-1212</p>
-				<p><a class = "email" href="mailto:dawgpizzaseattle@gmail.com">Email</a></p>
-				<p><a class="twitter" href="http://twitter.com/dawgpizzasea">Twitter</a></p>
-			</div>
-		</footer>
+        <div class = "menus">
+            <div class="row">
+                <div class="col-md-4 col-md-push-8">
+                    <h2>Your Cart</h2>
+                    <div class="cart-items-container"></div>
+                    <div class="cart-footer">
+                        <div class="row total-row">
+                            <div class="col-xs-10">
+                                Total:
+                            </div>
+                            <div class="col-xs-2">
+                                $<span class="total-price"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 button-row">
+                                <button type="button" class="btn btn-primary place-order">Place My Order</button>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="col-md-8 col-md-pull-4">
+                    <div class="movies-container"></div>        
+                </div>
+            </div>
 
-	</body>
-</html>	
+            <div class = "manuname">
+                <h2>Pizzas:</h2>
+                <p>All our pizzas are made with hand-thrown thin crust, baked in real wood ovens. Choose from one of these sizes:</p>
+                <p> Small (12")  Medium (14")  Large (17")</p>
+                <p class= "high">All pizzas can be customized--add a few ingredients, or take a few off--for an extra $2.</p>
+
+                <h2>Meat Pies:</h2>
+                <div class = "menu-data1">
+                    <div class = "pizza-template pizza">
+                        <button type="button" class="btn btn-default add-to-cart">
+                            <h3 class = "name"></h3>
+                        </button>
+                        <p class = "description"></p>
+                        <p class = "price"></p>
+                    </div>
+                </div>
+
+            </div>
+
+            
+        </div>
+
+        <footer>
+            <div class = "line">
+                <p>CALL US!</p>
+                <p>206-555-1212</p>
+                <p><a class = "email" href="mailto:dawgpizzaseattle@gmail.com">Email</a></p>
+                <p><a class="twitter" href="http://twitter.com/dawgpizzasea">Twitter</a></p>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        <script src="http://www.dawgpizza.com/orders/menu.js"></script>
+        <script src="js/demo.js"></script>
+    </body>
+</html> 
