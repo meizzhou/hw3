@@ -1,17 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset = "UTF-8">
-        <meta name = "author" content = "meizzhou">
-        <link rel="shortcut icon" href="img/logo.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <link rel="stylesheet" href="lib/bootstrap-3.0.2/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+<head>
+        <!-- tells the browser this file was saved in the UTF-8 character encoding -->
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <!-- tells the browser to get style information from styles.css in our 'css' sub-directory -->
+        <link rel="stylesheet" href="css/styles.css">
 
-        <title>Dawg-Pizza</title>
-    </head>
+        <!-- title for the page -->
+        <title>Dawg Pizza</title>
 
-    <body>
+        <!-- REPLACE 'your uw net id' with your UW net id -->
+        <meta name="author" content="meizzhou">
+        <script src="http://www.dawgpizza.com/orders/menu.js"></script>
+         <!-- hot link to minified jQuery library, version 2.0.3 -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+     <script src="js/OrderFoods.js"></script>
+     <script src = "js/models.js"></script>
+
+        <!-- Bootstrap JavaScript (if we need it) -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+        <!-- link to our JavaScript file -->
+</head>
+<body>
+        <div class = "container">
         <a class = "link" href="index.html"><img class = "logo" src="img/logo.jpg" alt = "logodog"></a>
         <header>
             <div class = "header-inner">
@@ -38,65 +51,106 @@
 
         </header>
 
-        <div class = "menus">
-            <div class="row">
-                <div class="col-md-4 col-md-push-8">
-                    <h2>Your Cart</h2>
-                    <div class="cart-items-container"></div>
-                    <div class="cart-footer">
-                        <div class="row total-row">
-                            <div class="col-xs-10">
-                                Total:
-                            </div>
-                            <div class="col-xs-2">
-                                $<span class="total-price"></span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 button-row">
-                                <button type="button" class="btn btn-primary place-order">Place My Order</button>
-                            </div>
-                        </div>                        
-                    </div>
-                </div>
-                <div class="col-md-8 col-md-pull-4">
-                    <div class="movies-container"></div>        
-                </div>
-            </div>
 
-            <div class = "manuname">
-                <h2>Pizzas:</h2>
-                <p>All our pizzas are made with hand-thrown thin crust, baked in real wood ovens. Choose from one of these sizes:</p>
-                <p> Small (12")  Medium (14")  Large (17")</p>
-                <p class= "high">All pizzas can be customized--add a few ingredients, or take a few off--for an extra $2.</p>
 
-                <h2>Meat Pies:</h2>
-                <div class = "menu-data1">
-                    <div class = "pizza-template pizza">
-                        <button type="button" class="btn btn-default add-to-cart">
-                            <h3 class = "name"></h3>
-                        </button>
-                        <p class = "description"></p>
-                        <p class = "price"></p>
-                    </div>
+
+                <div class = "well">
+                        <p>
+                                All our Pizzas are made with hand-thrown thin crust, baked in real wood ovens. Choose from one of these sizes:
+                        </p>
+                        <ul>
+                                <li>Small (12")</li>
+                                <li>Medium (14")</li>
+                                <li>Large (17")</li>
+                        </ul>
+                        <h3>We deliver only within the Seattle city limits </br> Cash or Credit accepted upon delivery
+                        </br>Additional toppings are not allowed upon delivery
+                        </br> Delivery Times: Noon to 11:00pm </h3>
                 </div>
 
-            </div>
+        <div class="row">
+        <div class="col-md-4 col-md-push-8">
+            <h2>Your Cart</h2>
+            <!--one more button ughhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh-->
+            <div class="cart-items-container"></div>
+         <div class = "cart">
+            <button type = "button" class="btn btn-default btn-s template cart-item" >
 
-            
+            </button>
         </div>
-
-        <footer>
-            <div class = "line">
-                <p>CALL US!</p>
-                <p>206-555-1212</p>
-                <p><a class = "email" href="mailto:dawgpizzaseattle@gmail.com">Email</a></p>
-                <p><a class="twitter" href="http://twitter.com/dawgpizzasea">Twitter</a></p>
+              <div class="cart-footer">
+                <div class="row total-row">
+                    <div class="col-xs-10">
+                        Total:
+                    </div>
+                    <div class="col-xs-2"></div>
+                    <button type = "button" class="btn btn-primary submit-order finalSubmitButton"> Purchase Now! </button>
+                    <button type = "button" class="btn btn-primary btn-s clear-cart"> Start Over Now!</button>
+                </div>                     
             </div>
-        </footer>
+        </div>
+    </div>
 
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-        <script src="http://www.dawgpizza.com/orders/menu.js"></script>
-        <script src="js/demo.js"></script>
-    </body>
-</html> 
+                <div class="modal fade" id="submitOrderForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                                <div class="modal-content">
+                                        <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                        
+                                                </button>
+                                                <h4 class="modal-title" id="modalTitle">Please Fill Out your Information:</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                                <form method="post" action="http://dawgpizza.com/orders/" class="address-form">
+                                                        <div class="form-group">
+                                                                <label for="name">Name</label>
+                                                                <input type="text" class="form-control form-name" placeholder="Name" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label for="address">Address</label>
+                                                                <input type="text" class="form-control form-line1" placeholder="Line 1" required>
+                                                                <input type="text" class="form-control form-line2" placeholder="Line 2">
+                                                        </div>
+                                                        <div class="row">
+                                                                <div class="form-group col-xs-3">
+                                                                        <label for="zip">Zip Code</label>
+                                                                        <input type="number" class="form-control form-zip" min="10000" max="99999" placeholder="Zip Code" required>
+                                                                </div>
+                                                                <div class="form-group col-xs-6">
+                                                                        <label for="phone">Phone Number</label>
+                                                                        <input type="text" class="form-control form-phone" placeholder="Phone Number" required>
+                                                                </div>
+                                                        </div>
+                                                        <input type="hidden" name="cart" id="jsonForm"/>
+                                                        <button type="submit" class="hidden-submit"></button>
+                                                </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                        Close
+                                                </button>
+                                                <button type="button" class="btn btn-primary finalSubmitButton">
+                                                        Submit Order
+                                                </button>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+
+            <div class = "menu7">
+                <h2>Order</h2>
+                <div class = "pizzaMenu"><h2> Pizzas </h2></div>
+                <div class = "vegpizzas"><h2> Vegetarian Pies </h2></div>         
+                <div class = "drinks"> <h2> Drinks </h2> </div>
+                <div class = "desserts"> <h2> Desserts </h2> </div>
+            </div>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        </div>
+         <!-- hot link to minified jQuery library, version 2.0.3 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+        <!-- Bootstrap JavaScript (if we need it) -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

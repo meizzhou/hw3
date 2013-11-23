@@ -31,8 +31,12 @@ body {
 	color: #ba8748;
 }
 
-.div {
-	display: block;
+button.template{
+	display: none;
+}
+
+.menu7 {
+	float: left;
 }
 
 .unit4 {
