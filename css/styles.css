@@ -64,6 +64,7 @@ button.template{
 	font-family: 'Open Sans Condensed', sans-serif;
 	background-image: url('../img/tex2res4.png');
 	color: #FFF;
+	max-width: 350px;
 }
 
 .cardo h2 {
@@ -156,7 +157,6 @@ a{
 
 :focus {
 	outline: #FFF dotted 2px;
-	background-color: #000;
 }
 
 h2{
