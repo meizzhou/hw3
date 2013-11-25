@@ -9,8 +9,8 @@ $("document").ready( function(){
         var name = document.createElement("dt");
         prices = document.createElement("dt");
         var small = '<button type= "button" class="btn btn-default btn-xs" data-type = "pizza" data-name = "'+ pizza.name + '" data-size = "small" data-price = "'+ pizza.prices[0] + '">' + "small $" + pizza.prices[0] + '</button>' + " ";
-        var medium = '<button type= "button" class="btn btn-default btn-xs" data-type = "pizza" data-name = "'+ pizza.name +'" data-size = "medium" data-price = "'+ pizza.prices[1] + '">' + "medium $" + pizza.prices[1] + '</button>' + " ";
-        var large = '<button type= "button" class="btn btn-default btn-xs" data-type = "pizza" data-name = "'+ pizza.name +'" data-size = "large" data-price = "'+ pizza.prices[2] + '">' + "large $" + pizza.prices[2] + '</button>' + " ";
+        var medium = '<button type= "button"  class="btn btn-default btn-xs" data-type = "pizza" data-name = "'+ pizza.name +'" data-size = "medium" data-price = "'+ pizza.prices[1] + '">' + "medium $" + pizza.prices[1] + '</button>' + " ";
+        var large = '<button type= "button"  class="btn btn-default btn-xs" data-type = "pizza" data-name = "'+ pizza.name +'" data-size = "large" data-price = "'+ pizza.prices[2] + '">' + "large $" + pizza.prices[2] + '</button>' + " ";
 
         $(name).html(pizza.name);
         $(prices).html(small + medium + large);
@@ -25,7 +25,8 @@ $("document").ready( function(){
             $(description).appendTo(".pizzaMenu");   
                         $(prices).appendTo(".pizzaMenu");
         }
-    } //for
+    } 
+
     var idx;
     var drink;
     for (idx = 0; idx < com.dawgpizza.menu.drinks.length; ++idx) {

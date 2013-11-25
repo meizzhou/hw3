@@ -45,30 +45,38 @@ button.template{
 
 .foods {
 	font-family: 'Open Sans Condensed', sans-serif;
-	background-image: url('../img/tex2res4.png');
-	color: #FFF;
+	color: #333333;
+	background-image: url('../img/geometry.png');
 }
 
 .foods h2 {
-	color: #FFF;
+	color: #333333;
+	font-weight: bold;
 }
+
+
 
 .des {
 	font-family: 'Open Sans Condensed', sans-serif;
-	background-image: url('../img/tex2res4.png');
-	color: #FFF;
+	background-image: url('../img/geometry.png');
+	color: #333333;
 	text-align: center;
 }
 
 .cardo {
 	font-family: 'Open Sans Condensed', sans-serif;
-	background-image: url('../img/tex2res4.png');
+	background-image: url('../img/geometry.png');
 	color: #FFF;
 	max-width: 350px;
 }
 
 .cardo h2 {
-	color: #FFF;
+	color: #333333;
+	font-weight: bold;
+}
+
+.cardo p {
+	color: #333333;
 }
 .unit4 {
 	width: 510px;
@@ -236,6 +244,10 @@ h2{
 .movie .pic {
     float: left;
     margin-right: 1em;
+}
+
+.hidden-submit {
+	display: none;
 }
 
 .total-price {
