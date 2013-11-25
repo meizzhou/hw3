@@ -39,6 +39,11 @@ button.template{
 	float: left;
 }
 
+.row {
+	font-size: 85%;
+}
+
+
 .unit4 {
 	width: 510px;
 	margin-left: auto;

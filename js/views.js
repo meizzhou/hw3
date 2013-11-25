@@ -9,25 +9,18 @@
 */
 var TemplateView = {
     render: function() {
-        var propVal;        //current property value
-        var targetElem;     //target element in cloned template
-        var targetTagName;  //tag name of target element
+        var propVal;        
+        var targetElem;     
+        var targetTagName;  
 
         var clonedTemplate = this.template.clone();
 
-        //iterrate over the properties of the model
-        //and look for a descendant element with the
-        //same style class name
         for (prop in this.model) {
 
             targetElem = clonedTemplate.find('.' + prop);
             if (targetElem.length > 0) {
-                //get the property value
                 propVal = this.model[prop];
-                
-                //get the tag name for the target element
                 targetTagName = targetElem.prop('tagName').toLowerCase();
-
                 if ('img' === targetTagName) {
                     targetElem.attr('src', this.model[prop]);
                 }
@@ -38,21 +31,15 @@ var TemplateView = {
                     targetElem.html(this.model[prop]);
                 }
             }
-        } //for each prop in model object
-
-        //add cloned and populated template to container
+        } 
         this.container.append(clonedTemplate);
-
-        //call the afterRender method if there is one
-        //(can be used by derived objects to add things or
-        //register event handlers after the render is complete)
         if (this.afterRender)
             this.afterRender(clonedTemplate, this.model);
 
         return clonedTemplate;
 
-    } //render()    
-}; //TemplateView
+    }    
+}; 
 
 /*  
     createTemplateView()
@@ -71,15 +58,11 @@ var TemplateView = {
 */
 function createTemplateView(config) {
     var view = Object.create(TemplateView);
-
-    //apply the config properites to view
     apply(config, view);
-
-    //enable this to raise events
     view = makeEventSource(view);
 
     return view;
-} //createTemplateView()
+} 
 
 
 /*
@@ -108,14 +91,10 @@ var TemplateListView = {
                 templateView.render();
             }
         }
-
-        //call the afterRender method if there is one
-        //(can be used by derived objects to add things or
-        //register event handlers after the render is complete)
         if (this.afterRender)
             this.afterRender();
 
-    } //render()    
+    }    
 }
 
 /*  
@@ -139,18 +118,10 @@ var TemplateListView = {
 */
 function createTemplateListView(config) {
     var view = Object.create(TemplateListView);
-
-    //apply config properties to view
     apply(config, view);
-
-    //enable this to raise events
     view = makeEventSource(view);
-
-    //listen for change event on ListModel
-    //and re-render
     view.model.on('change', function(){
         view.render();
     }, view);
-
     return view;
-} //createTemplateListView()
+} 

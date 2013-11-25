@@ -1,5 +1,4 @@
 $("document").ready( function(){
-    //takes in the pizza data and fills the file with pizza information
     var idx;
     var pizza;
     for (idx = 0; idx < com.dawgpizza.menu.pizzas.length; ++idx) {
@@ -17,7 +16,6 @@ $("document").ready( function(){
         }
     }
 
-    //takes in the pizza data and fills the file with drink information
     var idx;
     var drink;
     for (idx = 0; idx < com.dawgpizza.menu.drinks.length; ++idx) {
@@ -27,7 +25,6 @@ $("document").ready( function(){
         $(name).appendTo(".drinks");
     } 
 
-    //takes in the pizza data and fills the file with dessert information
     var idx;
     var desserts;
     for (idx = 0; idx < com.dawgpizza.menu.desserts.length; ++idx) {

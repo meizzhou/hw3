@@ -1,5 +1,4 @@
 $("document").ready( function(){
-    //takes in the pizza data and fills the file with pizza information
     var idx;
     var pizza;
     var prices;
@@ -27,8 +26,6 @@ $("document").ready( function(){
                         $(prices).appendTo(".pizzaMenu");
         }
     } //for
-
-    //takes in the pizza data and fills the file with drink information
     var idx;
     var drink;
     for (idx = 0; idx < com.dawgpizza.menu.drinks.length; ++idx) {
@@ -39,7 +36,6 @@ $("document").ready( function(){
         $(name).appendTo(".drinks");
     } 
 
-    //takes in the pizza data and fills the file with dessert information
     var idx;
     var dessert;
     for (idx = 0; idx < com.dawgpizza.menu.desserts.length; ++idx) {
@@ -50,12 +46,8 @@ $("document").ready( function(){
         $(name).appendTo(".desserts");
     } 
 
-    //adds to cart with a click
     $(".btn-xs").click(addToCart);
     
-    //adds to cart using button functionality
-    //button includes functionality for removal
-    //updates the total price + tax
     function addToCart(){
             var name = $(this).data("name");
             var type = $(this).data("type");
@@ -72,7 +64,6 @@ $("document").ready( function(){
                 quantity : 1
             });
 
-        //add button if it does not exist
             if(cart.exists(item) == -1){
                     cart.insert(item);
                     total += price;
@@ -89,7 +80,7 @@ $("document").ready( function(){
                     $(".cart").append(itemHtml);
                     $(".cart-item").unbind();
                     $(".cart-item").bind("click", removeFromCart);
-            } else { //adds to the quantity and does not add a new button
+            } else { 
                     cart.insert(item);
                     total += price;
                     $('.cart-item[data-name="' + name + '"].cart-item[data-size="' + size + '"]').html(" <span class=\"glyphicon glyphicon-remove\"></span> " + cart.getQuantity(item) + "x " + " for $" + price +" " + name + " : " + size);
@@ -97,8 +88,6 @@ $("document").ready( function(){
                 $(".col-xs-10").html("Total: $" + total + " + $" + (total * .095).toFixed(2) + " (tax) = $" + (total * 1.095).toFixed(2));
         }
 
-    //allows user to remove items from cart
-    //updates the total price + tax
         function removeFromCart(){
                 var name = $(this).data("name");
                 var type = $(this).data("type");
@@ -121,7 +110,6 @@ $("document").ready( function(){
                 $(this).remove();
         }
 
-    //removes item with a click
         function createCartItemView(config) {
         var view = createTemplateView(config);
         view.afterRender = function(clonedTemplate, model) {
@@ -131,24 +119,13 @@ $("document").ready( function(){
         };
         return view;
         } 
-    // postCart()
-    // posts the cart model to the server using
-    // the supplied HTML form
-    // parameters are:
-    //  - cart (object) reference to the cart model
-    //  - cartForm (jQuery object) reference to the HTML form
-    //
+
     function postCart(cart, cartForm) {
-        //find the input in the form that has the name of 'cart'    
-        //and set it's value to a JSON representation of the cart model
         cartForm.find('input[name="cart"]').val(JSON.stringify(cart));
-        //submit the form--this will navigate to an order confirmation page
         cartForm.submit();
 
     }
-
-    //submits the order into a modal with click
-    //if order is under $20, don't allow the click the work, and opens up an alert window    
+  
     $(".submit-order").click(function(){
         if(total < 20){
             alert("you need at least $20 to order");
@@ -158,7 +135,6 @@ $("document").ready( function(){
         }
     });
 
-    //clears items from cart
     $(".clear-cart").click(function() {
         cart.clearCart();
         total = 0;
@@ -166,7 +142,6 @@ $("document").ready( function(){
         $(".col-xs-10").html("Total: $" + total + " + $" + (total * .095).toFixed(2) + " (tax) = $" + (total * 1.095).toFixed(2));
     });
 
-    //populates the form for submitting onto separate page
     function submitForm() {
         cart.populateInfo({
             name : $(".form-name").val(),
